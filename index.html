@@ -1,0 +1,144 @@
+<div class="container">
+    <!-- Contêiner principal que agrupa todo o conteúdo do formulário -->
+    <header class="header">
+        <!-- Cabeçalho do formulário -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- Inclui o arquivo de estilo CSS externo -->
+        <script src="main.js"></script>
+        <!-- Inclui o arquivo JavaScript externo -->
+        <h1 id="title" class="text-center">Formulário de Pesquisa do TechLearningHub</h1>
+        <!-- Título principal do formulário, centralizado na página -->
+        <p id="description" class="description text-center">
+            Obrigado por dedicar seu tempo para nos ajudar a melhorar a plataforma
+        </p>
+        <!-- Descrição adicional para o formulário, também centralizada -->
+    </header>
+    
+    <form id="survey-form">
+        <!-- Início do formulário de pesquisa com ID "survey-form" -->
+
+        <div class="form-group">
+            <!-- Grupo de formulário para o campo "Nome" -->
+            <label id="name-label" for="name">Nome</label>
+            <!-- Rótulo para o campo de entrada do nome, vinculado ao input via "for" -->
+            <input type="text" name="name" id="name" class="form-control" placeholder="Digite seu nome" required />
+            <!-- Campo de entrada de texto para o nome, obrigatório para envio -->
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para o campo "Email" -->
+            <label id="email-label" for="email">Email</label>
+            <!-- Rótulo para o campo de entrada do email, vinculado ao input via "for" -->
+            <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu email" required />
+            <!-- Campo de entrada de email, obrigatório para envio -->
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para o campo "Idade" -->
+            <label id="number-label" for="number">Idade<span class="clue">(opcional)</span></label>
+            <!-- Rótulo para o campo de entrada da idade, indicando que é opcional -->
+            <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Idade" />
+            <!-- Campo de entrada numérica para a idade, com valores entre 10 e 99 -->
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para selecionar a função atual do usuário -->
+            <p>Qual das opções melhor descreve sua função atual?</p>
+            <!-- Pergunta solicitando a função atual do usuário -->
+            <select id="dropdown" name="role" class="form-control" required>
+                <!-- Menu suspenso para selecionar a função, obrigatório -->
+                <option disabled selected value>Selecione sua função atual</option>
+                <!-- Opção padrão desabilitada para instruir o usuário a selecionar uma opção -->
+                <option value="student">Estudante</option>
+                <!-- Opção para "Estudante" -->
+                <option value="job">Trabalho em tempo integral</option>
+                <!-- Opção para "Trabalho em tempo integral" -->
+                <option value="learner">Estudante em tempo integral</option>
+                <!-- Opção para "Estudante em tempo integral" -->
+                <option value="preferNo">Prefiro não dizer</option>
+                <!-- Opção para "Prefiro não dizer" -->
+                <option value="other">Outro</option>
+                <!-- Opção para "Outro" -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para a pergunta de recomendação -->
+            <p>Você recomendaria o TechLearningHub a um amigo?</p>
+            <!-- Pergunta sobre a recomendação do serviço -->
+            <label>
+                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Com certeza
+            </label>
+            <!-- Opção de rádio para "Com certeza", marcada por padrão -->
+            <label>
+                <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Talvez
+            </label>
+            <!-- Opção de rádio para "Talvez" -->
+            <label>
+                <input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Não tenho certeza
+            </label>
+            <!-- Opção de rádio para "Não tenho certeza" -->
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para selecionar o recurso favorito -->
+            <p>Qual é o seu recurso favorito do TechLearningHub?</p>
+            <!-- Pergunta sobre o recurso favorito do usuário -->
+            <select id="most-like" name="mostLike" class="form-control" required>
+                <!-- Menu suspenso para selecionar o recurso favorito, obrigatório -->
+                <option disabled selected value>Selecione uma opção</option>
+                <!-- Opção padrão desabilitada para instruir o usuário a selecionar uma opção -->
+                <option value="challenges">Desafios</option>
+                <!-- Opção para "Desafios" -->
+                <option value="projects">Projetos</option>
+                <!-- Opção para "Projetos" -->
+                <option value="community">Comunidade</option>
+                <!-- Opção para "Comunidade" -->
+                <option value="openSource">Código aberto</option>
+                <!-- Opção para "Código aberto" -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para selecionar melhorias desejadas -->
+            <p>O que você gostaria de ver melhorado?<span class="clue">(Marque todas as opções que se aplicam)</span></p>
+            <!-- Pergunta sobre melhorias desejadas, com uma dica adicional -->
+            <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />Projetos de Front-end</label>
+            <!-- Caixa de seleção para "Projetos de Front-end" -->
+            <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Projetos de Back-end</label>
+            <!-- Caixa de seleção para "Projetos de Back-end" -->
+            <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Visualização de Dados</label>
+            <!-- Caixa de seleção para "Visualização de Dados" -->
+            <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Desafios</label>
+            <!-- Caixa de seleção para "Desafios" -->
+            <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox" />Comunidade de Código Aberto</label>
+            <!-- Caixa de seleção para "Comunidade de Código Aberto" -->
+            <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />Salas de ajuda do Gitter</label>
+            <!-- Caixa de seleção para "Salas de ajuda do Gitter" -->
+            <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />Vídeos</label>
+            <!-- Caixa de seleção para "Vídeos" -->
+            <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />Encontros na Cidade</label>
+            <!-- Caixa de seleção para "Encontros na Cidade" -->
+            <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Wiki</label>
+            <!-- Caixa de seleção para "Wiki" -->
+            <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Fórum</label>
+            <!-- Caixa de seleção para "Fórum" -->
+            <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Cursos Adicionais</label>
+            <!-- Caixa de seleção para "Cursos Adicionais" -->
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para campo de comentários ou sugestões -->
+            <p>Algum comentário ou sugestão?</p>
+            <!-- Pergunta solicitando comentários ou sugestões do usuário -->
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Digite seu comentário aqui..."></textarea>
+            <!-- Área de texto para o usuário digitar suas sugestões ou comentários -->
+        </div>
+
+        <div class="form-group">
+            <!-- Grupo de formulário para o botão de envio -->
+            <button type="submit" id="submit" class="submit-button">Enviar</button>
+            <!-- Botão de envio do formulário -->
+        </div>
+    </form>
+</div>

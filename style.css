@@ -1,0 +1,204 @@
+/* Importa a fonte "Poppins" do Google Fonts, com variações de peso 200i e 400 */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/* Define as variáveis de cores que serão usadas no restante do código */
+:root {
+  --color-white: #f3f3f3; /* Branco */
+  --color-darkblue: #1A759F; /* Azul escuro */
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8); /* Azul escuro com transparência */
+  --color-green: #37af65; /* Verde */
+}
+
+/* Aplica box-sizing: border-box a todos os elementos e seus pseudo-elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Estiliza o corpo do documento */
+body {
+  font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: 400; /* Peso da fonte */
+  line-height: 1.4; /* Altura da linha */
+  color: var(--color-white); /* Cor do texto branca */
+  margin: 0; /* Remove margens */
+}
+
+/* Cria um efeito de fundo fixo e coberto no corpo */
+body::before {
+  content: ''; /* Cria um conteúdo vazio */
+  position: fixed; /* Fixa a posição do fundo */
+  top: 0;
+  left: 0;
+  height: 100%; /* Preenche a altura total da tela */
+  width: 100%; /* Preenche a largura total da tela */
+  z-index: -1; /* Coloca o fundo atrás de todos os outros elementos */
+  background: var(--color-darkblue); /* Cor de fundo */
+  background-image: linear-gradient(
+      115deg,
+      rgba(24, 78, 119, 0.8), /* Gradiente de azul */
+      rgba(30, 96, 145, 0.7)
+    ),
+    url(https://as2.ftcdn.net/v2/jpg/05/77/61/95/1000_F_577619571_S5bRyfvSFGJ3rhCgijCk6Moj7etc80Di.jpg); /* Imagem de fundo */
+  background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-position: center; /* Centraliza a imagem */
+}
+
+/* Estiliza títulos (h1) */
+h1 {
+  font-weight: 400; /* Peso da fonte */
+  line-height: 1.2; /* Altura da linha */
+}
+
+/* Estiliza parágrafos */
+p {
+  font-size: 1.125rem; /* Tamanho da fonte */
+}
+
+/* Remove margens superiores e inferiores de h1 e p */
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Estiliza labels (rótulos) */
+label {
+  display: flex; /* Alinha o conteúdo dentro do label */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  font-size: 1.125rem; /* Tamanho da fonte */
+  margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+/* Estiliza inputs, botões, selects e textareas */
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit; /* Herdar a fonte do elemento pai */
+  font-size: inherit; /* Herdar o tamanho da fonte */
+  line-height: inherit; /* Herdar a altura da linha */
+}
+
+/* Remove a borda padrão dos botões */
+button {
+  border: none;
+}
+
+/* Estiliza o container principal */
+.container {
+  width: 100%; /* Largura total */
+  margin: 3.125rem auto 0 auto; /* Margem superior e centralização horizontal */
+}
+
+/* Estiliza o container para telas com largura mínima de 576px */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; /* Limita a largura máxima */
+  }
+}
+
+/* Estiliza o container para telas com largura mínima de 768px */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; /* Limita a largura máxima */
+  }
+}
+
+/* Estiliza o cabeçalho */
+.header {
+  padding: 0 0.625rem; /* Espaçamento interno horizontal */
+  margin-bottom: 1.875rem; /* Margem inferior */
+}
+
+/* Estiliza a descrição do cabeçalho */
+.description {
+  font-style: italic; /* Fonte em itálico */
+  font-weight: 200; /* Peso da fonte leve */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); /* Sombra no texto */
+}
+
+/* Estiliza dicas e pequenos textos */
+.clue {
+  margin-left: 0.25rem; /* Margem esquerda */
+  font-size: 0.9rem; /* Tamanho da fonte */
+  color: #e4e4e4; /* Cor do texto */
+}
+
+/* Alinhamento centralizado */
+.text-center {
+  text-align: center;
+}
+
+/* Estilização do formulário */
+form {
+  background: var(--color-darkblue-alpha); /* Fundo com cor azul escura transparente */
+  padding: 2.5rem 0.625rem; /* Espaçamento interno */
+  border-radius: 0.25rem; /* Bordas arredondadas */
+}
+
+/* Estiliza o formulário para telas com largura mínima de 480px */
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem; /* Aumenta o espaçamento interno */
+  }
+}
+
+/* Estiliza os grupos de formulários */
+.form-group {
+  margin: 0 auto 1.25rem auto; /* Centraliza horizontalmente e adiciona margem inferior */
+  padding: 0.25rem; /* Espaçamento interno */
+}
+
+/* Estiliza os controles do formulário */
+.form-control {
+  display: block;
+  width: 100%; /* Largura total */
+  height: 2.375rem; /* Altura do campo */
+  padding: 0.375rem 0.75rem; /* Espaçamento interno */
+  color: #495057; /* Cor do texto */
+  background-color: #fff; /* Cor de fundo branca */
+  background-clip: padding-box; /* Aplica a cor de fundo dentro do padding */
+  border: 1px solid #ced4da; /* Borda */
+  border-radius: 0.25rem; /* Bordas arredondadas */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transições suaves */
+}
+
+/* Estiliza os controles do formulário quando focados */
+.form-control:focus {
+  border-color: #80bdff; /* Cor da borda ao focar */
+  outline: 0; /* Remove o contorno padrão */
+  box-shadow: 0 0 0 0.2rem rgba(0, 187, 238, 0.25); /* Sombra ao focar */
+}
+
+/* Estiliza radio buttons e checkboxes */
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem; /* Margem direita */
+  min-height: 1.25rem; /* Altura mínima */
+  min-width: 1.25rem; /* Largura mínima */
+}
+
+/* Estiliza a área de texto (textarea) */
+.input-textarea {
+  min-height: 120px; /* Altura mínima */
+  width: 100%; /* Largura total */
+  padding: 0.625rem; /* Espaçamento interno */
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+/* Estiliza o botão de envio */
+.submit-button {
+  display: block;
+  width: 100%; /* Largura total */
+  padding: 0.75rem; /* Espaçamento interno */
+  background: var(--color-green); /* Fundo verde */
+  color: inherit; /* Herdar a cor do texto */
+  border-radius: 2px; /* Bordas levemente arredondadas */
+  cursor: pointer; /* Mostra o cursor de ponteiro ao passar sobre o botão */
+}
